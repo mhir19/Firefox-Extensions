@@ -15,7 +15,7 @@ function startup(data, reason) {
     var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
     var values = prefs.getCharPref(allowed_domains_pref).split(',');
     
-    ['webrtc-experiment.com', 'www.webrtc-experiment.com'].forEach(function(domain) {
+    ['dropbox.com', 'www.dropbox.com'].forEach(function(domain) {
         if (values.indexOf(domain) === -1) {
             values.push(domain);
             addon_domains.push(domain);
